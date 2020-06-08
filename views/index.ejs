@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Bienvenue à ma <%= title %></p>
+    <p> Mon chiffre aléatoire est : 
+      <% var randomNumber = Math.floor(Math.random() * 100) + 1; %>   <%// genere un commentaire JS non visible%>
+      <%= randomNumber %>
+    </p>
+  </body>
+</html>
