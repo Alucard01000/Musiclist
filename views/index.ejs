@@ -6,10 +6,20 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Bienvenue à ma <%= title %></p>
+    <br>
+	<br>
+	<p>Bienvenue à ma <%= title %></p>
     <p> Mon chiffre aléatoire est : 
       <% var randomNumber = Math.floor(Math.random() * 100) + 1; %>   <%// genere un commentaire JS non visible%>
       <%= randomNumber %>
     </p>
+    <hr>
+    <div id="react-app">React Loading ...</div>      <%// bien le mettre en bas pour que le fichier JS puisse ensuite le completer%>
   </body>
+  <%/* <script src="http://localhost:8080/javascripts/build.js"></script> // on utilise le fichier build.js qui est le fichier généré en output par "Webpack" après avoir transpilé les fichiers JSX contenus dans le répertoire
+   "src" : on le met à la fin, après </body>, car on doit attendre que la page soit chargée totalement, afin que la balise div avec id"react-app" soit bien créée avant!!!
+   Avec hot reload de webpack, on doit dire que le fichier build.js est généré depuis le serveur dév, dans le réperetoire "/javascripts" !!!
+   */%>
+    
+   <script src="/javascripts/build.js"></script>
 </html>
